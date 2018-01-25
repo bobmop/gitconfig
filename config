@@ -1,0 +1,43 @@
+[alias]
+# basic
+  amend = commit --amend
+
+  b = branch
+  ba = branch -ra
+
+  cl = clone
+  co = checkout
+  cp = cherry-pick
+
+  fo = fetch origin
+
+  st = status
+  sts = status --short --branch
+
+
+#log
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+  lp = log -u
+
+
+# reset commands
+  r = reset
+  r1 = reset HEAD^
+  r2 = reset HEAD^^
+  rh = reset --hard
+  rh1 = reset HEAD^ --hard
+  rh2 = reset HEAD^^ --hard
+
+#stash
+  sl = stash list
+  sa = stash apply
+  ss = stash save
+
+#rebase
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbi = rebase --interactive
+  rbo = rebase --onto
